@@ -59,7 +59,7 @@ public class CaseController extends AbstractController implements CaseApi {
         ResponseCaseList response = null;
         HttpStatus status = HttpStatus.OK;
         try{
-            ModelCaseList list = caseService.getAllCases();
+            ModelCaseList list = caseService.getAllCases(page);
             response = fillSuccessResponse(new ResponseCaseList().returnValue(list));
         } catch(EthException ex) {
             status = ex.getHttpCode();
