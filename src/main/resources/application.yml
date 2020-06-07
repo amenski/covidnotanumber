@@ -11,7 +11,7 @@ spring:
          ddl-auto: update
       properties.hibernate.dialect: org.hibernate.dialect.PostgreSQL9Dialect
    datasource:
-      url: jdbc:postgresql://localhost:5432/wearenotnumbers
+      url: jdbc:postgresql://localhost:5432/covid19_rest
       username: postgres
       password: postgres
       driver-class-name: org.postgresql.Driver

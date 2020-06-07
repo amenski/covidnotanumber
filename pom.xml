@@ -11,7 +11,7 @@
 	<artifactId>we-are-not-numbers</artifactId>
 	<version>0.0.1</version>
 	<packaging>${packaging.type}</packaging>
-	<name>We are not numbers</name>
+	<name>we-are-not-numbers</name>
 	<description>We are not numbers</description>
 
 	<properties>

@@ -23,7 +23,7 @@ paths:
           '200':
             description: ''
             schema:
-              $ref: '#/definitions/response-case-list'
+              $ref: '#/definitions/response-base'
           '500':
             $ref: '#/responses/response-internal-server-error-500'
   '/v1/case/{id}':
@@ -40,7 +40,7 @@ paths:
           '200':
             description: ''
             schema:
-              $ref: '#/definitions/response-case-list' 
+              $ref: '#/definitions/response-case-single' 
           '500':
             $ref: '#/responses/response-internal-server-error-500'
   '/v1/case/all':
@@ -100,16 +100,19 @@ definitions:
           type: string
         email:
           type: string
-        description:
+        history:
           type: string
-        dateFrom:
+        age:
+          type: integer
+          format: int32
+        occupation:
           type: string
-          format: date
-        dateTo:
-          type: string
-          format: date
-        profession:
-          $ref: '#/definitions/model-enum-id-value'
+        city:
+           type: string
+      required:
+        - name
+        - email
+        - history
     model-attribute:
       type: object
       properties:
