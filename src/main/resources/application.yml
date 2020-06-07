@@ -1,0 +1,28 @@
+#==== spring related ======#
+spring:
+   profiles:
+      active: dev
+   application:
+    name: we-are-not-numbers
+
+#==== connect to postgres ======#
+   jpa: 
+      hibernate:
+         ddl-auto: update
+      properties.hibernate.dialect: org.hibernate.dialect.PostgreSQL9Dialect
+   datasource:
+      url: jdbc:postgresql://localhost:5432/wearenotnumbers
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+
+# ====== hibernate ====
+#logging.level.org.hibernate.SQL=TRACE
+#logging.level.org.hibernate.type=debug
+
+
+#logging:
+#   level:
+#      org.hibernate.SQL: TRACE
+#      org.hibernate.type: debug
+#      org.springframework.security: DEBUG
